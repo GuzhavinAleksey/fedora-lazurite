@@ -128,10 +128,6 @@ All the work is done [https://github.com/travier](https://github.com/travier) th
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-<!-- CONTACT -->
-## Contact
-
 <!-- CONTACT -->
 ## Contact
 
