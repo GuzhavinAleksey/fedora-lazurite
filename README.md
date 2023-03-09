@@ -136,7 +136,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 
-Project Link: [https://github.com/GuzhavinAleksey/fedora-lazurite](https://github.com/larago-go/larago)
+Project Link: [https://github.com/GuzhavinAleksey/fedora-lazurite](https://github.com/GuzhavinAleksey/fedora-lazurite)
 Author Link: [https://github.com/GuzhavinAleksey](https://github.com/GuzhavinAleksey)
 
 <!-- IMAGES -->
