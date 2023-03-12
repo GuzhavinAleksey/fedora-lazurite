@@ -19,7 +19,7 @@
   * [Installation](#installation)
   * [Build and installation](#Build_and_installation)
   * [Manifests](#Manifests)
-* [Thank you](#Thank_you)
+* [Thanks](#Thanks)
 * [License](#license)
 * [Contact](#contact)
 
@@ -120,7 +120,7 @@ sudo systemctl reboot
 <!-- Manifests -->
 ## Manifests
 rpm-ostree manifests used to build Fedora Lazurite, Kinoite [https://pagure.io/workstation-ostree-config](https://pagure.io/workstation-ostree-config) <!-- Thank_you -->
-## Thank_you
+## Thanks
 All the work is done [https://github.com/travier](https://github.com/travier) thanks to him, I will take care of the support of Fedora Silverblue with the LXQt desktop
 
 <!-- LICENSE -->
