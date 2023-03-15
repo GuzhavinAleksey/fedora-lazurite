@@ -19,6 +19,7 @@
   * [Installation](#installation)
   * [Build and installation](#Build_and_installation)
   * [Manifests](#Manifests)
+* [FAQ](#FAQ)
 * [Thanks](#Thanks)
 * [License](#license)
 * [Contact](#contact)
@@ -136,6 +137,20 @@ flatpak update
 <!-- Manifests -->
 ## Manifests
 rpm-ostree manifests used to build Fedora Lazurite, Kinoite [https://pagure.io/workstation-ostree-config](https://pagure.io/workstation-ostree-config) <!-- Thank_you -->
+
+## FAQ
+1. To remove the pinned deployment use following command (2 corresponds to the entry position in rpm-ostree status):
+```sh
+sudo ostree admin pin --unpin 2
+```
+2. How to revert
+```sh
+rpm-ostree rollback
+```
+3. If you have rpm-fusion layered on your Silverblue installation, you should do the following before rebase
+```sh
+rpm-ostree update --uninstall rpmfusion-free-release --uninstall rpmfusion-nonfree-release --install rpmfusion-free-release --install rpmfusion-nonfree-release
+```
 ## Thanks
 All the work is done [https://github.com/travier](https://github.com/travier) thanks to him, I will take care of the support of Fedora Silverblue with the LXQt desktop
 
