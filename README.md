@@ -70,6 +70,14 @@ sudo rpm-ostree rebase lazurite:fedora/37/x86_64/lazurite
 ```sh
 sudo systemctl reboot
 ```
+5. To update the system
+```sh
+rpm-ostree update
+```
+6. To update Flatpaks
+```sh
+flatpak update
+```
 ### Build_and_installation
 
 1. Clone the config
@@ -116,6 +124,14 @@ sudo rpm-ostree rebase lazurite_local:fedora/37/x86_64/lazurite
 9. Reboot
 ```sh
 sudo systemctl reboot
+```
+10. To update the system
+```sh
+rpm-ostree update
+```
+11. To update Flatpaks
+```sh
+flatpak update
 ```
 <!-- Manifests -->
 ## Manifests
