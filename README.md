@@ -147,7 +147,7 @@ sudo ostree admin pin --unpin 2
 ```sh
 rpm-ostree rollback
 ```
-3. If you have rpm-fusion layered on your Silverblue installation, you should do the following before rebase
+3. If you have rpm-fusion layered on your Lazurite,Kinoite,Silverblue installation, you should do the following before rebase
 ```sh
 rpm-ostree update --uninstall rpmfusion-free-release --uninstall rpmfusion-nonfree-release --install rpmfusion-free-release --install rpmfusion-nonfree-release
 ```
