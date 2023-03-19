@@ -93,7 +93,7 @@ ostree --repo=repo init --mode=archive
 ```
 3. Build (compose)
 ```sh
-sudo rpm-ostree compose tree --repo=repo --cachedir=cache fedora-lazurite.yaml
+sudo rpm-ostree compose tree --unified-core --repo=repo --cachedir=cache fedora-lazurite.yaml
 ```
 4. Update summary file
 ```sh
