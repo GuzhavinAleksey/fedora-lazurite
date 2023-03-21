@@ -4,7 +4,7 @@
 <p align="center">
 
   <a href="https://github.com/GuzhavinAleksey/fedora-lazurite">
-    <img src="lazurite-logo.png" alt="Logo" width="200" height="200">
+    <img src="lazurite-logo.png" alt="Logo" width="250" height="200">
   </a>
 
   <h3 align="center">Fedora Lazurite</h3>
