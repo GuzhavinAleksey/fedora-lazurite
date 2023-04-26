@@ -22,15 +22,20 @@ def validate_shell(rootfd, name):
 
 for root, dirs, files, rootfd in os.fwalk('.'):
     # Skip .git, repo, cache, tmp, logs, fedora-comps
-    for d in ['.git', 'repo', 'cache', 'tmp', 'logs', 'fedora-comps']:
+    for d in ['.git', 'repo', 'cache', 'tmp', 'logs', 'fedora-comps', 'ci']:
         if d in dirs:
             dirs.remove(d)
     for name in files:
+        if name == ".zuul.yaml":
+            continue
         if name.endswith(('.yaml', '.yml')):
             print("Validating:", name)
             with open(os.open(name, dir_fd=rootfd, flags=os.O_RDONLY)) as f:
                 yaml.safe_load(f)
-                validated +=1
+            result = subprocess.run(['grep', '-RniEv', '^(  )*[a-z#/-]|^$|^#', name], encoding='UTF-8')
+            if result.returncode == 0:
+                raise Exception("Found likely invalid indentation in YAML file: {}".format(name))
+            validated +=1
             continue
         elif name.endswith('.sh'):
             print("Validating:", name)
