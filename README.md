@@ -100,10 +100,11 @@ ostree summary --repo=repo --update
 5. Testing
 Instructions to test the resulting build:
 
-- First, serve the ostree repo using an HTTP server. You can use any static file server. For example using <https://github.com/TheWaWaR/simple-http-server>:
+```sh
+  First, serve the ostree repo using an HTTP server. You can use any static file server. For example using <https://github.com/TheWaWaR/simple-http-server>:
 	@@ -108,63 +52,38 @@ Instructions to test the resulting build:
   simple-http-server --index --ip 192.168.122.1 --port 8000
-  ```
+```
 
 - Then, on an already installed Lazurite system:
 
