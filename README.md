@@ -146,7 +146,7 @@ sudo ostree admin pin 0
 ```
 8. Switch to Lazurite
 ```sh
-sudo rpm-ostree rebase lazurite_local:fedora/37/x86_64/lazurite
+sudo rpm-ostree rebase lazurite_local:fedora/38/x86_64/lazurite
 ```
 9. Reboot
 ```sh
