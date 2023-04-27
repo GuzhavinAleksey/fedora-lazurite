@@ -85,7 +85,7 @@ flatpak update
 ```sh
 rpm-ostree update
 ```
-2. Optional, only if you want to keep Silverblue available
+2. Optional, only if you want to keep Lazurite available
 ```sh
 sudo ostree admin pin 0
 ```
