@@ -177,6 +177,10 @@ rpm-ostree rollback
 ```sh
 rpm-ostree update --uninstall rpmfusion-free-release --uninstall rpmfusion-nonfree-release --install rpmfusion-free-release --install rpmfusion-nonfree-release
 ```
+4. Example of fixing a package update error ffmpeg
+```sh
+rpm-ostree override remove libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpeg
+```
 ## Available_releases
 - lazurite:fedora/38/x86_64/lazurite
 - lazurite:fedora/37/x86_64/lazurite
