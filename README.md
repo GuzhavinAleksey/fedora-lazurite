@@ -20,6 +20,7 @@
   * [Build and installation](#Build_and_installation)
   * [Manifests](#Manifests)
 * [FAQ](#FAQ)
+* [Available releases](#Available_releases)
 * [Thanks](#Thanks)
 * [License](#license)
 * [Contact](#contact)
@@ -178,6 +179,9 @@ rpm-ostree update --uninstall rpmfusion-free-release --uninstall rpmfusion-nonfr
 ```
 ## Thanks
 All the work is done [https://github.com/travier](https://github.com/travier) thanks to him, I will take care of the support of Fedora Silverblue with the LXQt desktop
+## Available_releases
+- lazurite:fedora/38/x86_64/lazurite
+- lazurite:fedora/37/x86_64/lazurite
 
 <!-- LICENSE -->
 ## License
