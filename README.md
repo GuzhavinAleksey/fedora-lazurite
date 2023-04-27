@@ -16,6 +16,7 @@
 * [Specification](#specification)
 * [Getting Started](#getting-started)
   * [Installation](#installation)
+  * [Upgrade,rebase](#Upgrade_rebase)
   * [Build and installation](#Build_and_installation)
   * [Manifests](#Manifests)
 * [FAQ](#FAQ)
@@ -63,6 +64,32 @@ sudo ostree remote add lazurite https://lazurite.guzhavin.com/repo --no-gpg-veri
 sudo ostree admin pin 0
 ```
 3. Switch to Lazurite
+```sh
+sudo rpm-ostree rebase lazurite:fedora/38/x86_64/lazurite
+```
+4. Reboot
+```sh
+sudo systemctl reboot
+```
+5. To update the system
+```sh
+rpm-ostree update
+```
+6. To update Flatpaks
+```sh
+flatpak update
+```
+### Upgrade_rebase
+
+1. Update
+```sh
+rpm-ostree update
+```
+2. Optional, only if you want to keep Silverblue available
+```sh
+sudo ostree admin pin 0
+```
+3. Rebase fedora 38 lazurite
 ```sh
 sudo rpm-ostree rebase lazurite:fedora/38/x86_64/lazurite
 ```
