@@ -177,11 +177,12 @@ rpm-ostree rollback
 ```sh
 rpm-ostree update --uninstall rpmfusion-free-release --uninstall rpmfusion-nonfree-release --install rpmfusion-free-release --install rpmfusion-nonfree-release
 ```
-## Thanks
-All the work is done [https://github.com/travier](https://github.com/travier) thanks to him, I will take care of the support of Fedora Silverblue with the LXQt desktop
 ## Available_releases
 - lazurite:fedora/38/x86_64/lazurite
 - lazurite:fedora/37/x86_64/lazurite
+
+## Thanks
+All the work is done [https://github.com/travier](https://github.com/travier) thanks to him, I will take care of the support of Fedora Silverblue with the LXQt desktop
 
 <!-- LICENSE -->
 ## License
