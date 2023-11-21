@@ -2,12 +2,14 @@
 include: fedora-common-ostree.yaml
 packages:
   - NetworkManager-adsl
+  - NetworkManager-bluetooth
   - NetworkManager-openconnect-gnome
   - NetworkManager-openvpn-gnome
   - NetworkManager-ppp
   - NetworkManager-pptp-gnome
   - NetworkManager-ssh-gnome
   - NetworkManager-vpnc-gnome
+  - NetworkManager-wifi
   - NetworkManager-wwan
   - atril
   - atril-caja
@@ -23,13 +25,14 @@ packages:
   - dconf-editor
   - engrampa
   - eom
-  - f38-backgrounds-base
-  - f38-backgrounds-extras-base
-  - f38-backgrounds-extras-mate
-  - f38-backgrounds-mate
+  - f39-backgrounds-base
+  - f39-backgrounds-extras-base
+  - f39-backgrounds-extras-mate
+  - f39-backgrounds-mate
   - fedora-release-matecompiz
   - firefox
   - firewall-config
+  - glx-utils
   - gnome-epub-thumbnailer
   - gnome-themes-extra
   - gstreamer1-plugins-ugly-free
@@ -77,6 +80,8 @@ packages:
   - mate-themes
   - mate-user-admin
   - mate-user-guide
+  - mesa-dri-drivers
+  - mesa-vulkan-drivers
   - mozo
   - network-manager-applet
   - nm-connection-editor
@@ -86,6 +91,7 @@ packages:
   - pipewire-alsa
   - pipewire-pulseaudio
   - pluma
+  - plymouth-system-theme
   - seahorse
   - seahorse-caja
   - setroubleshoot
@@ -96,4 +102,22 @@ packages:
   - usermode-gtk
   - xdg-user-dirs-gtk
   - xmodmap
+  - xorg-x11-drv-amdgpu
+  - xorg-x11-drv-ati
+  - xorg-x11-drv-evdev
+  - xorg-x11-drv-fbdev
+  - xorg-x11-drv-libinput
+  - xorg-x11-drv-nouveau
+  - xorg-x11-drv-qxl
+  - xorg-x11-drv-wacom
+  - xorg-x11-server-Xorg
+  - xorg-x11-xauth
+  - xorg-x11-xinit
   - xrdb
+packages-x86_64:
+  - xorg-x11-drv-intel
+  - xorg-x11-drv-openchrome
+  - xorg-x11-drv-vesa
+  - xorg-x11-drv-vmware
+packages-aarch64:
+  - xorg-x11-drv-armsoc

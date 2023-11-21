@@ -12,6 +12,7 @@ exclude_list_groups:
   - libreoffice
   - gnome-desktop
   - container-management
+  - base-x
 
 # PackageKit is spread across various groups
 # We can not include openh264. See https://fedoraproject.org/wiki/OpenH264
@@ -27,6 +28,8 @@ exclude_list:
     # We use rpm-ostree for the host
     - dnf
     - dnf-plugins-core
+    - dnf5
+    - dnf5-plugins
     - yum
     # Not sure why this is there at all
     - dracut-config-rescue
@@ -42,6 +45,8 @@ exclude_list:
     # We use rpm-ostree for the host
     - dnf
     - dnf-plugins-core
+    - dnf5
+    - dnf5-plugins
     - deltarpm
     - python3-dnf-plugin-system-upgrade
     # We use fedora-release-silverblue instead
@@ -69,32 +74,35 @@ exclude_list:
     # Will change to git-core as git pulls in Perl
     - git
     # Apps
-    - rhythmbox
     - evolution
     - evolution-ews
     - evolution-help
     - mediawriter
+    - rhythmbox
     # This is ancient now, and IMO has been superceded by cgroups
     # Also it breaks with --unified-core.
     - psacct
     # Random tools: container
-    - rdist
     - jwhois
+    - net-tools
+    - nmap-ncat
+    - rdist
     - tcpdump
     - telnet
     - traceroute
-    - net-tools
-    - nmap-ncat
     # filesystem tools, again priv container
-    - symlinks
     - dosfstools
+    - symlinks
     # Misc
     - dos2unix
     # Gnome specific
     - desktop-backgrounds-gnome
     - gnome-shell-extension-background-logo
     - pinentry-gnome3
-    - qgnomeplatform
+    # Excluded here for all desktops and manually re-added in Silverblue manifest
+    - qadwaitadecorations-qt5
+    # X11 specific
+    - xorg-x11-drv-libinput
   networkmanager-submodules:
     # Let's use the builtin one by default
     - dhcp-client
@@ -110,7 +118,6 @@ desktop_exclude_list:
     # Non-critical apps -> Flatpak
     - baobab
     - cheese
-    - eog
     - evince
     - evince-djvu
     - evince-nautilus
@@ -132,48 +139,46 @@ desktop_exclude_list:
     - gnome-text-editor
     - gnome-weather
     - jwhois
+    - loupe
     - rdist
     - sane-backends-drivers-scanners
-    - symlinks
     - simple-scan
     - sushi
+    - symlinks
     - tcpdump
     - telnet
     - totem
     - totem-nautilus
     - traceroute
+  budgie-desktop:
+    # Incompatible with ostree for various reasons
+    - abrt-desktop
+    - cups-pk-helper
+    - dnfdragora
+    # Remove uncommon NetworkManager plugins
+    - NetworkManager-fortisslvpn-gnome
+    - NetworkManager-iodine-gnome
+    - NetworkManager-l2tp-gnome
+    - NetworkManager-libreswan-gnome
+    - NetworkManager-sstp-gnome
+    - NetworkManager-strongswan-gnome
+  budgie-desktop-apps:
+    # Non-critical apps -> Flatpak
+    - atril
+    - eom
+    - gnome-calculator
+    - parole
+    - rhythmbox
   kde-desktop:
     # Incompatible with ostree for various reasons
     - abrt-desktop
     - cups-pk-helper
     - dnfdragora
     - plasma-pk-updates
-    # Non-critical apps -> Flatpak
-    - akregator
-    - cagibi
-    - elisa-player
-    - gwenview
-    - kaddressbook
-    - kamera
-    - kcalc
-    - kcolorchooser
-    - kf5-kipi-plugins
-    - kget
-    - kgpg
-    - kmail
-    - kmouth
-    - knode
-    - konqueror
-    - kontact
-    - korganizer
-    - kruler
-    - ksshaskpass
-    - kwrite
-    - libreoffice-kde
-    - okular
     # Misc
-    - keditbookmarks
+    - ksshaskpass
     - kwebkitpart
+    # Remove some NetworkManager plugins that pull-in lesser used VPN packages
     - plasma-nm-l2tp
     - plasma-nm-openswan
     - plasma-nm-pptp
@@ -227,7 +232,6 @@ desktop_exclude_list:
     - xfburn
     - yelp
     # Non critical NetworkManager plugins
-    - NetworkManager-bluetooth
     - NetworkManager-iodine-gnome
     - NetworkManager-l2tp-gnome
     - NetworkManager-libreswan-gnome
@@ -235,9 +239,41 @@ desktop_exclude_list:
     - NetworkManager-sstp-gnome
     - NetworkManager-strongswan-gnome
     - NetworkManager-team
-    - NetworkManager-wifi
     # Already in the common set
     - wireplumber
   swaywm-extended:
     # Non-critical apps -> Flatpak
     - mpv
+  cinnamon-desktop:
+    # Incompatible with ostree for various reasons
+    - abrt-desktop
+    - abrt-java-connector
+    - dnfdragora-updater
+    # Non-critical apps -> Flatpak & toolbox
+    - eom
+    - gnome-calculator
+    - gucharmap
+    - hexchat
+    - mpv
+    - pidgin
+    - sane-backends-drivers-scanners
+    - shotwell
+    - simple-scan
+    - thunderbird
+    - tmux
+    - tmux-powerline
+    - transmission
+    - vim-powerline
+    - xed
+    - xfburn
+    - xreader
+    # Not default to cinnamon
+    - paper-icon-theme
+    # Non critical NetworkManager plugins
+    - NetworkManager-iodine-gnome
+    - NetworkManager-l2tp-gnome
+    - NetworkManager-libreswan-gnome
+    - NetworkManager-ovs
+    - NetworkManager-sstp-gnome
+    - NetworkManager-strongswan-gnome
+    - NetworkManager-team
