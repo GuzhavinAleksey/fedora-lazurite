@@ -63,7 +63,7 @@ sudo ostree admin pin 0
 ```
 3. Switch to Lazurite
 ```sh
-sudo rpm-ostree rebase lazurite:fedora/38/x86_64/lazurite
+sudo rpm-ostree rebase lazurite:fedora/39/x86_64/lazurite
 ```
 4. Reboot
 ```sh
@@ -87,9 +87,9 @@ rpm-ostree update
 ```sh
 sudo ostree admin pin 0
 ```
-3. Rebase fedora 38 lazurite
+3. Rebase fedora 39 lazurite
 ```sh
-sudo rpm-ostree rebase lazurite:fedora/38/x86_64/lazurite
+sudo rpm-ostree rebase lazurite:fedora/39/x86_64/lazurite
 ```
 4. Reboot
 ```sh
@@ -139,7 +139,7 @@ sudo ostree admin pin 0
 ```
 8. Switch to Lazurite
 ```sh
-sudo rpm-ostree rebase lazurite_local:fedora/38/x86_64/lazurite
+sudo rpm-ostree rebase lazurite_local:fedora/39/x86_64/lazurite
 ```
 9. Reboot
 ```sh
@@ -175,6 +175,7 @@ rpm-ostree update --uninstall rpmfusion-free-release --uninstall rpmfusion-nonfr
 rpm-ostree override remove libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpeg
 ```
 ## Available_releases
+- lazurite:fedora/39/x86_64/lazurite
 - lazurite:fedora/38/x86_64/lazurite
 - lazurite:fedora/37/x86_64/lazurite
 
